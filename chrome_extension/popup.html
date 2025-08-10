@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Bulk Sender</title>
+  <style>
+    body { font-family: Arial, sans-serif; width: 300px; margin: 0; padding: 10px; }
+    textarea, input { width: 100%; margin-bottom: 10px; }
+    button { background: #25D366; color: #fff; border: none; padding: 10px; width: 100%; font-size: 16px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #128C7E; }
+  </style>
+</head>
+<body>
+  <h3>WhatsApp Bulk Sender</h3>
+  <label>Message:</label>
+  <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+  <label>Phone Numbers (comma separated):</label>
+  <input id="phones" type="text" placeholder="e.g. +911234567890, +919876543210">
+  <button id="sendBtn">Send</button>
+  <div id="status" style="margin-top:10px;color:#25D366;"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
