@@ -1,15 +1,20 @@
 {
   "manifest_version": 3,
   "name": "WhatsApp Bulk Sender",
-  "version": "1.0",
-  "description": "Send bulk WhatsApp messages from your browser.",
-  "permissions": ["scripting", "tabs"],
+  "version": "1.1",
+  "description": "Send bulk WhatsApp messages automatically from your browser.",
+  "permissions": ["scripting", "tabs", "storage"],
   "host_permissions": ["https://web.whatsapp.com/*"],
   "action": {
     "default_popup": "popup.html"
-    
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/send*"],
+      "js": ["content.js"]
+    }
+  ]
 }
